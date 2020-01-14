@@ -19,13 +19,44 @@
             \end{multicols}
         \item % 3
         \item % 4
+            \begin{enumerate}[(1)]
+                \item % 4.1
+                    先证明 $A \cap (B \cup C) \subset (A \cap B) \cup (A \cap C)$, 再证明 $(A \cap B) \cup (A \cap C) \subset A \cap (B \cup C)$ 即可.
+                \item % 4.2
+                    略.
+            \end{enumerate}
         \item % 5
         \item % 6
         \item % 7
         \item % 8
         \item % 9
         \item % 10
+            \begin{enumerate}[(1)]
+                \item % 10.1
+                    $\dfrac{n(n+1)}{2}$, $\dfrac{n(n+1)(2n+1)}{6}$, $\dfrac{n((n+1)(2n+10) + 12)}{6}$.
+                \item % 10.2
+                    \[
+                        \sum_{i=1}^n(-1)^i =
+                        \begin{cases}
+                            0, & \text{若 $n$ 为偶数}, \\
+                            1, & \text{若 $n$ 为奇数}.
+                        \end{cases}    
+                    \]
+                    \[
+                        \sum_{i=1}^n(-1)^ii =
+                        \begin{cases}
+                            \dfrac{n}{2}, & \text{若 $n$ 为偶数}, \\
+                            -\dfrac{n+1}{2}, & \text{若 $n$ 为奇数}.
+                        \end{cases}    
+                    \]
+            \end{enumerate}
         \item % 11
+            {\heiti 证明}\quad \begin{align*}
+                \sum_{i=1}^n\frac{1}{i(i+1)} &= \sum_{i=1}^n\left(\frac1i - \frac{1}{i+1}\right) \\
+                                             &= \sum_{i=1}^n\frac1i - \sum_{i=1}^n\frac{1}{i+1} \\
+                                             &= \left(1 + \frac12 + \cdots + \frac1n\right) - \left(\frac12 + \frac13 + \cdots + \frac{1}{n+1}\right) \\
+                                             &= 1 - \frac{1}{n+1}.
+            \end{align*}
         \item % 12
         \item % 13
         \item % 14
