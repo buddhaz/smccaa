@@ -6,6 +6,23 @@
 \begin{document}
     \begin{enumerate}
         \item % 1
+            \begin{enumerate}[(1)]
+                \item % 1.1
+                    若 $a$, $b$, $c$, $d \in \mathbb{Q}$, 且 $c$, $d \neq 0$.  一方面, 有
+                    \[
+                        a + b\sqrt{2} \pm (c + d\sqrt{2}) = (a \pm c) + (b \pm d)\sqrt{2} \in  \mathbb{Q}(\sqrt{2}).    
+                    \]
+                    另一方面, 有
+                    \begin{gather*}
+                        (a + b\sqrt{2}) * (c + d\sqrt{2}) = (ac + 2bd) + (ad + bc)\sqrt{2} \in \mathbb{Q}(\sqrt{2}), \\
+                        \frac{a + b\sqrt{2}}{c + d\sqrt{2}} = \frac{(a + b\sqrt{2})(c - d\sqrt{2})}{c^2 - 2d^2} = \frac{ac - 2bd}{c^2 - 2d^2} + \frac{bc - ad}{c^2 - 2d^2}\sqrt{2} \in \mathbb{Q}\sqrt{2}.    
+                    \end{gather*}
+                    因此 $\mathbb{Q}(\sqrt{2})$ 是一个数域. 
+                \item % 1.2
+                    略.
+                \item % 1.3
+                    略.
+            \end{enumerate}
         \item % 2
             \begin{multicols}{3}
                 \begin{enumerate}[(1)]
@@ -27,6 +44,18 @@
             \end{enumerate}
         \item % 5
         \item % 6
+            {\heiti 证明}\quad 先证明 $(0, 1)$ 里的有理数与正整数集之间有一个一一对应. 可以将 $(0, 1)$ 里的有理数排列如下:
+            \begin{gather*}
+                \frac12, \\
+                \frac13, \frac23, \\
+                \frac14, \frac24, \frac34, \\
+                \frac15, \frac25, \frac35, \frac45, \\
+                \dots
+            \end{gather*}
+            这样便将 $(0, 1)$ 中所有的有理数排列出来，并且不会有遗漏. 再将上面的有理数排成一排并剔除重复的数, 则所得的一列数便与正整数集合之间建立了一个一一对应.
+        
+            对于其它区间 $(0 + n, 1 + n)\ (n \in \mathbb{Z})$, 采用同样的方法 (排列的时候对每个数加 $n$) 即可. 至于 $\{0, \pm1, \pm2, \dots\}$, 它们本身就与正整数集是一一对应的.
+            这样便建立了 $\mathbb{Q}$ 与正整数集之间的一个一一对应.
         \item % 7
         \item % 8
         \item % 9
