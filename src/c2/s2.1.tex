@@ -48,13 +48,45 @@
         \item % 12
         \item % 13
         \item % 14
+            {\heiti 证明}\quad 从 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$ 中任取 $r$ 个线性无关的向量 $\alpha_{i_1}$, $\alpha_{i_2}$, $\cdots$, $\alpha_{i_r}$ 组成一个部分组.
+            再从余下的向量中任取个一向量 $\alpha_{i_{r+1}}$ 添加到部分组中. 因为 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$ 的秩为 $r$, 所以新的部分组 $\alpha_{i_1}$, $\alpha_{i_2}$, $\cdots$, $\alpha_{i_r}$, $\alpha_{i_{r+1}}$ 必定是线性相关的.
+            根据{\heiti 第 6 题}的结论, 可知 $\alpha_{i_{r+1}}$ 可被 $\alpha_{i_1}$, $\alpha_{i_2}$, $\cdots$, $\alpha_{i_r}$ 线性表示.
+            因此 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$ 可被 $\alpha_{i_1}$, $\alpha_{i_2}$, $\cdots$, $\alpha_{i_r}$ 线性表示, 即 $\alpha_{i_1}$, $\alpha_{i_2}$, $\cdots$, $\alpha_{i_r}$ 是其极大线性无关部分组.
         \item % 15
         \item % 16
+            {\heiti 证明}\quad 设 $(\mathrm{\uppercase\expandafter{\romannumeral1'}})$ 和 $(\mathrm{\uppercase\expandafter{\romannumeral2'}})$ 分别是 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 和 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 的极大线性无关部分组, 且 $(\mathrm{\uppercase\expandafter{\romannumeral1'}})$ 的个数为 $r$, $(\mathrm{\uppercase\expandafter{\romannumeral2'}})$ 的个数为 $s$.
+            因为 $(\mathrm{\uppercase\expandafter{\romannumeral1'}})$ 可被 $(\mathrm{\uppercase\expandafter{\romannumeral2'}})$ 线性表示, 且 $(\mathrm{\uppercase\expandafter{\romannumeral1'}})$ 线性无关, 所以 $r \leqslant s$. 
         \item % 17
+            {\heiti 证明}\quad 已知 $\varepsilon_1$, $\varepsilon_2$, $\cdots$, $\varepsilon_n$ 的秩为 $n$, 再根据{\heiti 第 16 题}的结论, 即可得 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_n$ 的秩为 $n$.
+            因此 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_n$ 线性无关.
         \item % 18
+            {\heiti 证明}\quad 先证明充分性. 因为 $n$ 维坐标向量 $\varepsilon_1$, $\varepsilon_2$, $\cdots$, $\varepsilon_n$ 可被 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_n$ 线性表示, 根据{\heiti 第 17 题}的结论即可知 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_n$ 线性无关.
+            
+            再证明必要性. 任取 $\alpha_{n+1} \in K^n$ 添加到 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_n$ 中组成新向量组 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$. 若 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 线性相关, 根据{\heiti 第 6 题}的结论, 可知 $\alpha_{n+1}$ 可被 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_n$ 线性表示, 必要性得证.
+            若 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 线性无关, 已知 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 可被 $n$ 维坐标向量 $\varepsilon_1$, $\varepsilon_2$, $\cdots$, $\varepsilon_n$ 线性表示, 但 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 的秩 $>$ 后者的秩, 与{\heiti 第 16 题}的结论相悖. 因此 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 必定线性相关.
         \item % 19
+            提示: 运用筛选法.
         \item % 20
+            {\heiti 证明}\quad 记 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$ 为 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$,
+            $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$, $\alpha_{s+1}$, $\cdots$, $\alpha_s$ 为 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$.
+            $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 显然可被 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 线性表示, 现只需证明 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 可被 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 线性表示即可.
+
+            设 $(\mathrm{\uppercase\expandafter{\romannumeral3}})$ 是 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 的一个极大线性无关部分组.
+            因为 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 和 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 的秩相同,
+            所以 $(\mathrm{\uppercase\expandafter{\romannumeral3}})$ 也是 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 的极大线性无关部分组,
+            即 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 可被 $(\mathrm{\uppercase\expandafter{\romannumeral3}})$ 线性表示.
+            又因 $(\mathrm{\uppercase\expandafter{\romannumeral3}})$ 可被 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 线性表示,
+            所以 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 可被 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 线性表示.
         \item % 21
+            {\heiti 证明}\quad 根据{\heiti 第 16 题}的结论, 只需证明 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 与 $\beta_1$, $\beta_2$, $\cdots$, $\beta_r$ 线性等价即可.
+            一方面, $\beta_1$, $\beta_2$, $\cdots$, $\beta_r$ 显然可被 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 线性表示. 另一方面, 有
+            \begin{gather*}
+                \alpha_1 = \frac{\beta_1 + \beta_2 + \cdots + \beta_r}{r - 1} - \beta_1, \\
+                \alpha_2 = \frac{\beta_1 + \beta_2 + \cdots + \beta_r}{r - 1} - \beta_2, \\
+                \cdots, \\
+                \alpha_r = \frac{\beta_1 + \beta_2 + \cdots + \beta_r}{r - 1} - \beta_r.    
+            \end{gather*}
+            因此 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 与 $\beta_1$, $\beta_2$, $\cdots$, $\beta_r$ 的秩相同.
         \item % 22
         \item % 23
         \item % 24
