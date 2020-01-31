@@ -23,6 +23,24 @@
                     $x_1 = \dfrac56x_4 + \dfrac16$, $x_2 = -\dfrac76x_4 + \dfrac16$, $x_3 = \dfrac56x_4 + \dfrac16$.
             \end{enumerate}
         \item % 2
+            {\heiti 证明}\quad 利用矩阵消元法, 则有
+            \[
+                \begin{bmatrix}
+                    a_{11} & a_{12} \\
+                    a_{21} & a_{22}
+                \end{bmatrix}
+                \rightarrow
+                \begin{bmatrix}
+                    -a_{21} & -\dfrac{a_{12}a_{21}}{a_{11}} \\
+                    a_{21} & a_{22}
+                \end{bmatrix}
+                \rightarrow
+                \begin{bmatrix}
+                    -a_{21} & -\dfrac{a_{12}a_{21}}{a_{11}} \\
+                    0 & \dfrac{a_{11}a_{22} - a_{12}a_{21}}{a_{11}}
+                \end{bmatrix}. 
+            \]
+            因此 $a_{11}a_{22} - a_{12}a_{21} = 0$.
         \item % 3
             \begin{enumerate}[(1)]
                 \item % 3.1
@@ -34,6 +52,7 @@
         \item % 4
             $a = \dfrac13$. $x_1 = 3x_3$, $x_2 = -7x_3$.
         \item % 5
+            略.
         \item % 6
             {\heiti 证明}\quad 利用矩阵消元法, 则有
             \begin{gather*}
@@ -75,6 +94,30 @@
             \end{gather*}
             因此 $\sum\limits_{i=1}^5a_i = 0$. 进一步, 解得 $x_1 = x_5 - a_5$, $x_2 = x_5 - (a_1 + a_5)$, $x_3 = x_5 - (a_1 + a_2 + a_5)$, $x_4 = x_5 - (a_1 + a_2 + a_3 + a_5)$.
         \item % 7
+            利用矩阵消元法, 则有
+            \begin{gather*}
+                \begin{bmatrix}
+                    1 & 0 & 0 & \cdots & 0 & 0 & 1 \\
+                    1 & 1 & 0 & \cdots & 0 & 0 & 0 \\
+                    0 & 1 & 1 & \cdots & 0 & 0 & 0 \\
+                    \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+                    0 & 0 & 0 & \cdots & 1 & 0 & 0 \\
+                    0 & 0 & 0 & \cdots & 1 & 1 & 0 \\
+                    0 & 0 & 0 & \cdots & 0 & 1 & 1
+                \end{bmatrix}
+                \rightarrow
+                \begin{bmatrix}
+                    1 & 0 & 0 & \cdots & 0 & 0 & 1 \\
+                    0 & 1 & 0 & \cdots & 0 & 0 & -1 \\
+                    0 & 0 & 1 & \cdots & 0 & 0 & 1 \\
+                    \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+                    0 & 0 & 0 & \cdots & 1 & 0 & (-1)^{n-3} \\
+                    0 & 0 & 0 & \cdots & 0 & 1 & (-1)^{n-2} \\
+                    0 & 0 & 0 & \cdots & 0 & 0 & 1 - (-1)^{n-2}
+                \end{bmatrix}.
+            \end{gather*}
+            考察 $x_n$ 前的系数 $1 - (-1)^{n-2}$. 当 $n$ 为奇数时, 解得 $x_1 = x_2 = \cdots = x_n = 0$.
+            当 $n$ 为偶数时, 解得 $x_1 = x_n$, $x_2 = -x_n$, $\cdots$, $x_{n-1} = (-1)^{n-1}x_n$.
         \item % 8
         \item % 9
         \item % 10
