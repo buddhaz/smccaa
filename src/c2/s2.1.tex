@@ -11,7 +11,8 @@
         \item % 2
         \item % 3
         \item % 4
-            {\heiti 证明}\quad 令 $\beta_1 = \alpha_1 + \alpha_2$, $\beta_2 = \alpha_2 + \alpha_3$, $\beta_3 = \alpha_3 + \alpha_1$. $\beta_1$, $\beta_2$, $\beta_3$ 显然可以被 $\alpha_1$, $\alpha_2$, $\alpha_3$ 线性表示.
+            {\heiti 证明}\quad 令 $\beta_1 = \alpha_1 + \alpha_2$, $\beta_2 = \alpha_2 + \alpha_3$, $\beta_3 = \alpha_3 + \alpha_1$.
+            一方面, $\beta_1$, $\beta_2$, $\beta_3$ 显然可以被 $\alpha_1$, $\alpha_2$, $\alpha_3$ 线性表示.
             另一方面, 有
             \begin{gather*}
                 \alpha_1 = \frac{\beta_1 - \beta_2 + \beta_3}{2}, \\
@@ -47,6 +48,8 @@
             略.
         \item % 12
         \item % 13
+            {\heiti 证明}\quad 对 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$ 中的任一向量 $\alpha_i$, 根据{\heiti 第 6 题}的结论, 可知 $\alpha_i$ 可被 $\alpha_{i_1}$, $\alpha_{i_2}$, $\cdots$, $\alpha_{i_r}$ 线性表示.
+            因此 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$ 可被线性表示, 即 $\alpha_{i_1}$, $\alpha_{i_2}$, $\cdots$, $\alpha_{i_r}$ 是其极大线性无关部分组.
         \item % 14
             {\heiti 证明}\quad 从 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$ 中任取 $r$ 个线性无关的向量 $\alpha_{i_1}$, $\alpha_{i_2}$, $\cdots$, $\alpha_{i_r}$ 组成一个部分组.
             再从余下的向量中任取个一向量 $\alpha_{i_{r+1}}$ 添加到部分组中. 因为 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$ 的秩为 $r$, 所以新的部分组 $\alpha_{i_1}$, $\alpha_{i_2}$, $\cdots$, $\alpha_{i_r}$, $\alpha_{i_{r+1}}$ 必定是线性相关的.
@@ -65,7 +68,7 @@
             再证明必要性. 任取 $\alpha_{n+1} \in K^n$ 添加到 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_n$ 中组成新向量组 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$. 若 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 线性相关, 根据{\heiti 第 6 题}的结论, 可知 $\alpha_{n+1}$ 可被 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_n$ 线性表示, 必要性得证.
             若 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 线性无关, 已知 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 可被 $n$ 维坐标向量 $\varepsilon_1$, $\varepsilon_2$, $\cdots$, $\varepsilon_n$ 线性表示, 但 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 的秩 $>$ 后者的秩, 与{\heiti 第 16 题}的结论相悖. 因此 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 必定线性相关.
         \item % 19
-            提示: 运用筛选法.
+            提示: 利用筛选法.
         \item % 20
             {\heiti 证明}\quad 记 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$ 为 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$,
             $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_s$, $\alpha_{s+1}$, $\cdots$, $\alpha_s$ 为 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$.
@@ -76,9 +79,11 @@
             所以 $(\mathrm{\uppercase\expandafter{\romannumeral3}})$ 也是 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 的极大线性无关部分组,
             即 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 可被 $(\mathrm{\uppercase\expandafter{\romannumeral3}})$ 线性表示.
             又因 $(\mathrm{\uppercase\expandafter{\romannumeral3}})$ 可被 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 线性表示,
-            所以 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 可被 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 线性表示.
+            所以 $(\mathrm{\uppercase\expandafter{\romannumeral2}})$ 亦可被 $(\mathrm{\uppercase\expandafter{\romannumeral1}})$ 线性表示.
         \item % 21
-            {\heiti 证明}\quad 根据{\heiti 第 16 题}的结论, 只需证明 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 与 $\beta_1$, $\beta_2$, $\cdots$, $\beta_r$ 线性等价即可.
+            {\heiti 证明}\quad 欲证明$\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 与 $\beta_1$, $\beta_2$, $\cdots$, $\beta_r$ 的秩相同,
+            根据{\heiti 第 16 题}的结论, 只需证明 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 与 $\beta_1$, $\beta_2$, $\cdots$, $\beta_r$ 线性等价即可.
+            
             一方面, $\beta_1$, $\beta_2$, $\cdots$, $\beta_r$ 显然可被 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 线性表示. 另一方面, 有
             \begin{gather*}
                 \alpha_1 = \frac{\beta_1 + \beta_2 + \cdots + \beta_r}{r - 1} - \beta_1, \\
@@ -86,10 +91,44 @@
                 \cdots, \\
                 \alpha_r = \frac{\beta_1 + \beta_2 + \cdots + \beta_r}{r - 1} - \beta_r.    
             \end{gather*}
-            因此 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 与 $\beta_1$, $\beta_2$, $\cdots$, $\beta_r$ 的秩相同.
+            因此 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_r$ 与 $\beta_1$, $\beta_2$, $\cdots$, $\beta_r$ 线性等价.
         \item % 22
+            任取 $k_1$, $k_2 \in K$, 使
+            \begin{align*}
+                    & k_1(\alpha_1 - \alpha_2) + k_2(\alpha_2 - \alpha_3) \\
+                ={} & k_1\alpha_1 + (k_2 - k_1)\alpha_2 - k_2\alpha_3 \\
+                ={} & 0.
+            \end{align*}
+            因为 $\alpha_1$, $\alpha_2$, $\alpha_3$ 线性无关, 所以 $k_1 = k_2 - k_1 = -k_2 = 0$, 即 $k_1 = k_2 = 0$.
+            因此 $\alpha_1 - \alpha_2$, $\alpha_2 - \alpha_3$ 线性无关. 另外, 有
+            \begin{gather*}
+                \alpha_1 - \alpha_2 = 1 \cdot (\alpha_1 - \alpha_2) + 0 \cdot (\alpha_2 - \alpha_3), \\
+                \alpha_2 - \alpha_3 = 0 \cdot (\alpha_1 - \alpha_2) + 1 \cdot (\alpha_2 - \alpha_3), \\
+                \alpha_3 - \alpha_1 = (-1) \cdot (\alpha_1 - \alpha_2) + (-1) \cdot (\alpha_2 - \alpha_3),
+            \end{gather*}
+            即 $\alpha_1 - \alpha_2$, $\alpha_2 - \alpha_3$, $\alpha_3 - \alpha_1$ 可被 $\alpha_1 - \alpha_2$, $\alpha_2 - \alpha_3$ 线性表示.
+            因此 $\alpha_1 - \alpha_2$, $\alpha_2 - \alpha_3$ 是一个极大线性无关部分组.
         \item % 23
         \item % 24
         \item % 25
+            任取 $k_1$, $k_2$, $\cdots$, $k_n \in K$, 使
+            \begin{align*}
+                & k_1\eta_1 + k_2\eta_2 + \cdots + k_n\eta_n \\
+                ={} & (k_1 + k_1a_1, k_1, \cdots, k_1) + \cdots + (k_n, k_n, \cdots, k_n + k_na_n) \\
+                ={} & \left(k_1a_1 + \sum_{i=1}^nk_i, k_2a_2 + \sum_{i=1}^nk_i, \cdots, k_na_n + \sum_{i=1}^nk_i\right) \\
+                ={} & (0, 0, \cdots, 0) \\
+                ={} & 0,
+            \end{align*}
+            即
+            \[
+                k_1a_1 = k_2a_2 = \cdots = k_na_n = -\sum_{i=1}^nk_i.    
+            \]
+            若 $k_1 = k_2 = \cdots = k_n = 0$, 等式显然成立. 若 $k_1$, $k_2$, $\cdots$, $k_n$ 不全为零, 假设 $k_{i_1}$, $k_{i_2}$, $\cdots$, $k_{i_j}$ 不为零, 那么
+            \begin{align*}
+                \frac{1}{a_{i_1}} + \frac{1}{a_{i_2}} + \cdots + \frac{1}{a_{i_j}} &= -\frac{k_{i_1} + k_{i_2} + \cdots + k_{i_j}}{\displaystyle{\sum_{i=1}^nk_i}} \\
+                                                                                   &= -\frac{k_{i_1} + k_{i_2} + \cdots + k_{i_j}}{k_{i_1} + k_{i_2} + \cdots + k_{i_j}} \\
+                                                                                   &= -1,
+            \end{align*}
+            与题意矛盾. 因此 $k_1 = k_2 = \cdots = k_n = 0$, 即 $\eta_1$, $\eta_2$, $\cdots$, $\eta_n$ 线性无关, 亦即 $\eta_1$, $\eta_2$, $\cdots$, $\eta_n$ 的秩为 $n$.
     \end{enumerate}
 \end{document}
