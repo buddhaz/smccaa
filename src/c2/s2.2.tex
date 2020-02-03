@@ -1,0 +1,128 @@
+% @author Shuning Zhang
+% @date 2020-01-30
+\documentclass[a4paper, 11pt]{ctexart}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{enumerate}
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{multicol}
+\newcommand{\rank}{\mathrm{r}}
+\begin{document}
+\begin{enumerate}
+    \item % 1
+    \item % 2
+    \item % 3
+    \item % 4
+    \item % 5
+        \begin{enumerate}[(1)]
+            \item % 5.1
+                {\heiti 证明}\quad 证明反身性, 对称性, 传递性即可. $A \sim A$ 是显然的.
+                矩阵 $A$ 经过初等行列变换为 $B$, $B$ 显然可以通过逆行列变换为 $A$, 因此 $A \sim B$ 可得 $B \sim A$.
+                对 $A$ 经过初等行列变换为 $B$, 再对 $B$ 经过初等行列变换为 $C$, 这本就是由 $A$ 变换为 $C$, 因此由 $A \sim B$, $B \sim C$ 可推出 $A \sim C$.
+            \item % 5.2
+                {\heiti 证明}\quad 在 (1) 的证明过程中可知 $\sim$ 是等价关系是显然的.
+                考虑 $A$ 的转置矩阵 $A'$, $A'$ 是一个 $n \times m$ 矩阵, 对 $A$ 做初等列变换就是对 $A'$ 做初等行变换, 因为 $\rank(A) = \rank(A') = m$, 即表明由 $A'$ 组成系数矩阵的齐次线性方程组只有零解, 因为 $A'$ 只有 $m$ 列.
+                因此 $A'$ 只能化为
+                \[
+                    \begin{bmatrix}
+                        1 & 0 & 0 & \cdots & 0 \\
+                        0 & 1 & 0 & \cdots & 0 \\
+                        0 & 0 & 1 & \cdots & 0 \\
+                        \vdots & \vdots & \vdots & \ddots & \vdots \\
+                        0 & 0 & 0 & \cdots & 1 \\
+                        \vdots & \vdots & \vdots &  & \vdots \\
+                        0 & 0 & 0 & \cdots & 0
+                    \end{bmatrix}    
+                \]
+                再将此矩阵转置回去便是所求的矩阵.
+            \item % 5.3
+                {\heiti 证明} 此题便是 (2) 中对 $A'$ 的讨论.
+        \end{enumerate}
+    \item % 6
+    \item % 7
+        对矩阵进行初等行变换，互换第 $i$ 行和第 $j$ 行, 便得到如下的 $n \times n$ 标准型
+        \[
+            \begin{bmatrix}
+                1 & 0 & \cdots & 0 \\
+                0 & 1 & \cdots & 0 \\
+                \vdots & \vdots & \ddots & \vdots \\
+                0 & 0 & \cdots & 1 \\
+            \end{bmatrix}.    
+        \]
+        因此矩阵的秩为 $n$.
+    \item % 8
+        \begin{gather*}
+            \begin{bmatrix}
+                1 & 0 & 0 & \cdots & 0 & 1 \\
+                1 & 1 & 0 & \cdots & 0 & 0 \\
+                0 & 1 & 1 & \cdots & 0 & 0 \\
+                \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+                0 & 0 & 0 & \cdots & 1 & 1   
+            \end{bmatrix}
+            \rightarrow
+            \begin{bmatrix}
+                1 & 0 & 0 & \cdots & 0 & 1 \\
+                0 & 1 & 0 & \cdots & 0 & -1 \\
+                0 & 1 & 1 & \cdots & 0 & 0 \\
+                \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+                0 & 0 & 0 & \cdots & 1 & 1   
+            \end{bmatrix} \\
+            \rightarrow
+            \begin{bmatrix}
+                1 & 0 & 0 & \cdots & 0 & 1 \\
+                0 & 1 & 0 & \cdots & 0 & -1 \\
+                0 & 0 & 1 & \cdots & 0 & 1 \\
+                \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+                0 & 0 & 0 & \cdots & 1 & 1   
+            \end{bmatrix}
+            \rightarrow
+            \begin{bmatrix}
+                1 & 0 & 0 & \cdots & 0 & 1 \\
+                0 & 1 & 0 & \cdots & 0 & -1 \\
+                0 & 0 & 1 & \cdots & 0 & 1 \\
+                \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+                0 & 0 & 0 & \cdots & 0 & (-1)^{n-1}   
+            \end{bmatrix} \\
+            \rightarrow
+            \begin{bmatrix}
+                1 & 0 & 0 & \cdots & 0 & 0 \\
+                0 & 1 & 0 & \cdots & 0 & 0 \\
+                0 & 0 & 1 & \cdots & 0 & 0 \\
+                \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+                0 & 0 & 0 & \cdots & 0 & (-1)^{n-1}   
+            \end{bmatrix}.
+        \end{gather*}
+        当 $n$ 为奇数时, 矩阵的秩为 $n$. 当 $n$ 为偶数时, 对第 $n$ 行乘以 $-1$, 也得矩阵的秩为 $n$.
+    \item % 9
+        设 $A$ 的列向量组为 $\alpha_1, \alpha_2, \cdots, \alpha_n$, $B$ 的列向量组为 $\beta_1, \beta_2, \cdots, \beta_s$.
+        那么 $C$ 的列向量组为 $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_n$, $\beta_1$, $\beta_2$, $\cdots$, $\beta_s$.
+        再设 $A$ 的极大线性无关部分组为 $\alpha_{i_1}$, $\cdots$, $\alpha_{i_r}$, $B$ 的极大线性无关部分组为 $\beta_{i_1}$, $\cdots$, $\beta_{i_t}$.
+        
+        $\alpha_1$, $\alpha_2$, $\cdots$, $\alpha_n$, $\beta_1$, $\beta_2$, $\cdots$, $\beta_s$ 显然可被 $\alpha_{i_1}$, $\cdots$, $\alpha_{i_r}$, $\beta_{i_1}$, $\cdots$, $\beta_{i_t}$ 线性表示.
+        根据 2.1 节的第 16 题 则有
+        \[
+            \rank(C) \leqslant \rank(\alpha_{i_1}, \cdots, \alpha_{i_r}, \beta_{i_1}, \cdots, \beta_{i_t}) \leqslant r + t = \rank(A) + \rank(B).    
+        \]
+        对于左边的不等式, $A$, $B$ 显然可被 $C$ 线性表示, 因此 $\rank(A) \leqslant \rank(C)$, $\rank(B) \leqslant \rank(C)$, 即
+        \[
+            \max(\rank(A), \rank(B)) \leqslant \rank(C).    
+        \]
+    \item % 10
+        {\heiti 证明}\quad 同第 10 题的证法. 设 $A$ 的列向量组极大线性无关部分组为 $A'$, $B$ 的列向量组极大线性无关部分组 $B'$.
+        把 $A'$ 与 $B'$ 并排起来为 $C'$. 显然 $C$ 可被 $C'$ 线性表示, 因此
+        \[
+            \rank(C) \leqslant \rank(C') \leqslant \rank(A) + \rank(B).    
+        \]
+    \item % 11
+        {\heiti 证明}\quad 考虑由 $\alpha_1, \alpha_2, \cdots, \alpha_n$ 组成的齐次线性方程组的系数矩阵 $A$.
+        因为对系数矩阵作初等变换得到的 $B$, $A$ 与 $B$ 同解, 故由
+        \[
+            \alpha_1x_1 + \alpha_2x_2 + \cdots + \alpha_nx_n = 0,    
+        \]
+        可推出
+        \[
+            \beta_1x_1 + \beta_2x_2 + \cdots + \beta_nx_n = 0.    
+        \]
+    \item % 12
+    \item % 13
+\end{enumerate}
+\end{document}
