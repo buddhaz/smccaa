@@ -2,6 +2,7 @@
 % @date 2020-02-04
 \documentclass[a4paper, 11pt]{ctexart}
 \usepackage{amsfonts, amsmath, amssymb}
+\usepackage{color}
 \usepackage{enumerate}
 \usepackage[bottom=2cm, left=2.5cm, right=2.5cm, top=2cm]{geometry}
 \usepackage{multicol}
@@ -10,7 +11,15 @@
 \begin{enumerate}
     \item % 1
     \item % 2
+        {\heiti 证明}\quad 设齐次线性方程组的基础解析为 $\eta$, 线性无关的向量组为 $\eta'$.
+        因为 $\eta \sim \eta'$, 故 $\rank(\eta) = \rank(\eta')$. 又因齐次线性方程组的任一解向量可被 $\eta$ 线性表示, 而 $\eta$ 可被 $\eta'$ 线性表示, 因此齐次线性方程组的任一解向量可被 $\eta'$ 线性表示.
+        综上可知 $\eta'$ 是基础解系.
     \item % 3
+        {\heiti 证明}\quad 设齐次线性方程组的任意 $n - r$ 个解向量为 $\eta$, 已知 $\eta$ 线性无关, 因此只需证明任一解向量可被 $\eta$ 线性表示即可.
+        
+        设齐次线性方程组的一个基础解系为 $\eta'$. 将 $\eta$ 和 $\eta'$ 合并成一个新的向量组, 记为 $\eta + \eta'$, 显然这个新的向量组可被 $\eta'$ 线性表示, 而 $\eta'$ 又是线性无关的.
+        因此 $\eta'$ 是 $\eta + \eta'$ 极大线性无关部分组. 因此 $\eta + \eta'$ 中任意 $n - r$ 个线性无关的向量也是它的极大线性无关部分组. 因此 $\eta'$ 也可被 $\eta$ 线性表示.
+        这样便证明了 $\eta$ 也是一个基础解系.  
     \item % 4
     \item % 5
     \item % 6
