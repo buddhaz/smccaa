@@ -10,6 +10,7 @@
 \begin{document}
 \begin{enumerate}
     \item % 1
+        略.
     \item % 2
         {\heiti 证明}\quad 设齐次线性方程组的基础解析为 $\eta$, 线性无关的向量组为 $\eta'$.
         因为 $\eta \sim \eta'$, 故 $\rank(\eta) = \rank(\eta')$. 又因齐次线性方程组的任一解向量可被 $\eta$ 线性表示, 而 $\eta$ 可被 $\eta'$ 线性表示, 因此齐次线性方程组的任一解向量可被 $\eta'$ 线性表示.
@@ -21,17 +22,157 @@
         因此 $\eta'$ 是 $\eta + \eta'$ 极大线性无关部分组. 因此 $\eta + \eta'$ 中任意 $n - r$ 个线性无关的向量也是它的极大线性无关部分组. 因此 $\eta'$ 也可被 $\eta$ 线性表示.
         这样便证明了 $\eta$ 也是一个基础解系.  
     \item % 4
+        {\color{red} remained unfinished}{\heiti 证明}\quad 设齐次线性方程组的基础解系为 $\eta$
     \item % 5
+        {\heiti 证明}\quad 两个方程组的秩都 $< n/2$, 这说明每个方程组通过初等行变换化为的阶梯型方程组的非零行数 $< n / 2$.
+        将这两个阶梯型方程组合并起来, 那么新的方程组的行数必定 $< n$, 再对这个新方程组进行初等行变换, 那么最后的非零行的行数必定 $< n$,
+        即这个新方程组的秩 $< n$, 根据定理 3.1 的推论可知, 新方程组必有非零解, 这个非零解正是两组方程的公共解.
     \item % 6
+        对方程组的系数矩阵 $A$ 进行初等变化, 即
+        \begin{gather*}
+            A =
+            \begin{bmatrix}
+                0 & 1 & 1 & \cdots & 1 \\
+                1 & 0 & 1 & \cdots & 1 \\
+                \vdots & \vdots & \vdots & \ddots & \vdots \\
+                1 & 1 & 1 & \cdots & 0
+            \end{bmatrix}
+            \rightarrow
+            \begin{bmatrix}
+                0 & 1 & 1 & \cdots & 1 \\
+                1 & -1 & 0 & \cdots & 0 \\
+                \vdots & \vdots & \vdots & \ddots & \vdots \\
+                1 & 0 & 0 & \cdots & -1
+            \end{bmatrix}
+            \rightarrow
+            \begin{bmatrix}
+                n & 1 & 1 & \cdots & 1 \\
+                0 & -1 & 0 & \cdots & 0 \\
+                \vdots & \vdots & \vdots & \ddots & \vdots \\
+                0 & 0 & 0 & \cdots & -1
+            \end{bmatrix} \\
+            \rightarrow
+            \begin{bmatrix}
+                n & 0 & 0 & \cdots & 0 \\
+                0 & -1 & 0 & \cdots & 0 \\
+                \vdots & \vdots & \vdots & \ddots & \vdots \\
+                0 & 0 & 0 & \cdots & -1
+            \end{bmatrix}
+            \rightarrow
+            \begin{bmatrix}
+                1 & 0 & 0 & \cdots & 0 \\
+                0 & 1 & 0 & \cdots & 0 \\
+                \vdots & \vdots & \vdots & \ddots & \vdots \\
+                0 & 0 & 0 & \cdots & 1
+            \end{bmatrix}.
+        \end{gather*}
+        因此 $\rank(A) = n$, 即方程组只有零解.
     \item % 7
     \item % 8
+        略.
     \item % 9
+        {\heiti 证明}\quad 设方程组的向量方程为 $\alpha_1x_1 + \alpha_2x_2 + \cdots + \alpha_nx_n = \beta$.
+        若 $\beta = 0$, 则 $k_1\eta_1 + k_2\eta_2 + \cdots + k_t\eta_t$ 显然也是方程组的解.
+        若 $\beta \neq 0$, 记 $\eta_k^{(i)}\ (1 \leqslant k \leqslant t, 1\leqslant i\leqslant n)$ 为 $\eta_k$ 的第 $i$ 个分量, 对 $k_1\eta_1$, 有
+        \begin{align*}
+            & \alpha_1(k_1\eta_1^{(1)}) + \alpha_2(k_1\eta_1^{(2)}) + \cdot + \alpha_n(k_1\eta_1^{(n)}) \\
+            ={} & k_1\alpha_1\eta_1^{(1)} + k_1\alpha_2\eta_1^{(2)} + \cdot + k_1\alpha_n\eta_1^{(n)} \\
+            ={} & k_1(\alpha_1\eta_1^{(1)} + \alpha_2\eta_1^{(2)} + \cdot + \alpha_n\eta_1^{(n)}) \\
+            ={} & k_1\beta.    
+        \end{align*}
+        那么对于 $k_1\eta_1 + k_2\eta_2 + \cdots + k_t\eta_t$, 则有
+        \begin{align*}
+            & \alpha_1(k_1\eta_1^{(1)} + k_2\eta_2^{(1)} + \cdots + k_t\eta_k^{(1)}) + \cdots + \alpha_n(k_1\eta_1^{(n)} + k_2\eta_2^{(n)} + \cdots + k_t\eta_k^{(n)}) \\
+            ={} & k_1(\alpha_1\eta_1^{(1)} + \alpha_2\eta_1^{(2)} + \cdot + \alpha_n\eta_1^{(n)}) + \cdots k_t(\alpha_1\eta_t^{(1)} + \alpha_2\eta_t^{(2)} + \cdot + \alpha_n\eta_t^{(n)}) \\
+            ={} & k_1\beta + \cdots + k_t\beta \\
+            ={} & (k_1 + \cdots + k_t)\beta \\
+            ={} & \beta.
+        \end{align*}
+        因此 $k_1\eta_1 + k_2\eta_2 + \cdots + k_t\eta_t$ 也是非齐次方程组的解.
     \item % 10
+        {\color{red} remained lacked}
+        $n$ 个平面对应的对应的线性方程组为
+        \[
+            \begin{cases}
+                A_1x + B_1y + C_1z = -D_1, \\
+                A_2x + B_2y + C_2z = -D_2, \\
+                \cdots, \\
+                A_nx + B_ny + C_nz = -D_n.
+            \end{cases}
+        \]
+        $n$ 平面经过同一点, 即方程组只有唯一解. 根据定理 3.3, 即要求系数矩阵的秩 $=$ 增广矩阵的秩 $= 3$ 即可 .
     \item % 11
+        {\heiti 证明} 根据题意, 显然有不等式
+        \[
+            \rank(A) \leqslant \rank(\overline{A}) \leqslant \rank(B)    
+        \]
+        成立. 又因 $\rank(A) = \rank(B)$, 因此 $\rank(A) = \rank(\overline{A})$. 根据定理 3.2 即可得知方程组有解.
     \item % 12
+        写出线性方程组的增广矩阵, 并作初等变换, 即
+        \begin{gather*}
+            \begin{bmatrix}
+                a & a & \cdots & a & b & b_1 \\
+                a & a & \cdots & b & a & b_2 \\
+                \vdots & \vdots &  & \vdots & \vdots \\
+                a & b & \cdots & a & a & b_{n-1} \\
+                b & a & \cdots & a & a & b_n
+            \end{bmatrix}
+            \rightarrow
+            \begin{bmatrix}
+                b & a & \cdots & a & a & b_n \\
+                a & b & \cdots & a & a & b_{n-1} \\
+                \vdots & \vdots &  & \vdots & \vdots \\
+                a & a & \cdots & b & a & b_2 \\
+                a & a & \cdots & a & b & b_1
+            \end{bmatrix} \\
+            \rightarrow
+            \begin{bmatrix}
+                b-a & 0 & \cdots & 0 & a & b_n \\
+                0 & b-a & \cdots & 0 & a & b_{n-1} \\
+                \vdots & \vdots &  & \vdots & \vdots \\
+                0 & 0 & \cdots & b-a & a & b_2 \\
+                a-b & a-b & \cdots & a-b & b & b_1
+            \end{bmatrix} \\
+            \rightarrow
+            \begin{bmatrix}
+                b-a & 0 & \cdots & 0 & a & b_n \\
+                0 & b-a & \cdots & 0 & a & b_{n-1} \\
+                \vdots & \vdots &  & \vdots & \vdots \\
+                0 & 0 & \cdots & b-a & a & b_2 \\
+                0 & 0 & \cdots & 0 & b-(n-1)a & b_1 - \sum_{i=2}^nb_i
+            \end{bmatrix}.
+        \end{gather*}
+        当 $b = (n-1)a$ 且 $b_1 = \sum_{i=2}^nb_i$ 且 $b \ne a$ 时, $\rank(A) = \rank(\overline{A}) = n - 1 < n$, 此时方程组有无穷多组解.
+        
+        当 $b \ne (n-1)a$ 且 $b_1 \ne \sum_{i=2}^nb_i$ 且 $b \ne a$ 时, $\rank(A) = \rank(\overline{A}) = n$, 此时方程组只有唯一解.
     \item % 13
+        {\heiti 证明}\quad 方程组的全部解可写成 $\gamma_0 + l_1\eta_1 + l_2\eta_2 + \cdots + l_s\eta_s$, 令
+        \begin{gather*}
+            k_0 = 1 - (l_1 + l_2 + \cdots + l_s), \\
+            k_1 = \eta_1 = 1 - k_0 - (l_2 + l_3 + \cdots + l_s), \\
+            \cdots, \\
+            k_s = \eta_s = 1 - k_0 - (l_1 + l_2 + \cdots + l_{s-1}). \\
+        \end{gather*}
+        可知 $k_0 + k_1 + \cdots + k_s = 1$, 而且
+        \begin{align*}
+            & \gamma_0 + l_1\eta_1 + l_2\eta_2 + \cdots + l_s\eta_s \\
+            ={} & (k_0 + k_1 + \cdots + k_s)\gamma_0 + k_1\eta_1 + \cdots + k_s\eta_s \\
+            ={} & k_0\gamma_0 + k_1(\gamma_0 + \eta_1) + \cdots + k_s(\gamma_0 + \eta_s) \\
+            ={} & k_0\gamma_0 + k_1\gamma_1 + \cdots + k_s\gamma_s.   
+        \end{align*}
     \item % 14
     \item % 15
+        {\color{red} remained lacked}
     \item % 16
+        {\heiti 证明}\quad 对方程组的系数矩阵进行初等变换, 即
+        \begin{gather*}
+            \begin{bmatrix}
+                \lambda & a_{12} & \cdots & a_{1(n-1)} & a_{1n} \\
+                a_{21} & \lambda & \cdots & a_{2(n-1)} & a_{2n} \\
+                \vdots & \vdots & \ddots & \vdots & \vdots \\ 
+                a_{(n-1)1} & a_{(n-1)2} & \cdots & \lambda & a_{(n-1)n} \\
+                a_{n1} & a_{n2} & \cdots & a_{n(n-1)} & \lambda     
+            \end{bmatrix}
+        \end{gather*}
 \end{enumerate}
 \end{document}
