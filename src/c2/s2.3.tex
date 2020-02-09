@@ -1,13 +1,13 @@
-% @author Shuning Zhang
-% @date 2020-02-04
-\documentclass[a4paper, 11pt]{ctexart}
-\usepackage{amsfonts, amsmath, amssymb}
-\usepackage{color}
-\usepackage{enumerate}
-\usepackage[bottom=2cm, left=2.5cm, right=2.5cm, top=2cm]{geometry}
-\usepackage{multicol}
-\newcommand{\rank}{\mathrm{r}}
-\begin{document}
+% % @author Shuning Zhang
+% % @date 2020-02-04
+% \documentclass[a4paper, 11pt]{ctexart}
+% \usepackage{amsfonts, amsmath, amssymb}
+% \usepackage{color}
+% \usepackage{enumerate}
+% \usepackage[bottom=2cm, left=2.5cm, right=2.5cm, top=2cm]{geometry}
+% \usepackage{multicol}
+% \newcommand{\rank}{\mathrm{r}}
+% \begin{document}
 \begin{enumerate}
     \item % 1
         略.
@@ -22,7 +22,9 @@
         因此 $\eta'$ 是 $\eta + \eta'$ 极大线性无关部分组. 因此 $\eta + \eta'$ 中任意 $n - r$ 个线性无关的向量也是它的极大线性无关部分组. 因此 $\eta'$ 也可被 $\eta$ 线性表示.
         这样便证明了 $\eta$ 也是一个基础解系.  
     \item % 4
-        {\color{red} remained unfinished}{\heiti 证明}\quad 设齐次线性方程组的基础解系为 $\eta$
+        {\color{red} remained unfinished}{\heiti 证明}\quad 记方程组的系数矩阵为 $A$, 将 $b_1x_1 + \cdots + b_nx_n = 0$ 添加到方程组中, 组成新的方程组, 并记新的方程组的系数矩阵为 $B$.
+        显然新的方程组有解, 且 $\rank(A) \leqslant \rank(B)$. 若 $\rank(A) = \rank(B)$, 则说明 $b_1x_1 + \cdots + b_nx_n = 0$ 是一个"无效"方程, 即 $\beta$ 可由 $\alpha_i$ 的极大线性无关部分组表示, 而极大线性无关部分组可由 $\alpha_i$ 线性表示,
+        因此 $\beta$ 可被 $\alpha_i$ 线性表示. 若 $\rank(A) < \rank(B)$, 只可能是 $\rank(A) + 1 = \rank(B)$, 即添加进来的新方程组"有效", 即 $\beta$ 通过初等行变换后与 $\alpha_i$ 的极大线性无关部分组组成一个新的极大线性无关部分组.
     \item % 5
         {\heiti 证明}\quad 两个方程组的秩都 $< n/2$, 这说明每个方程组通过初等行变换化为的阶梯型方程组的非零行数 $< n / 2$.
         将这两个阶梯型方程组合并起来, 那么新的方程组的行数必定 $< n$, 再对这个新方程组进行初等行变换, 那么最后的非零行的行数必定 $< n$,
@@ -149,11 +151,11 @@
         {\heiti 证明}\quad 方程组的全部解可写成 $\gamma_0 + l_1\eta_1 + l_2\eta_2 + \cdots + l_s\eta_s$, 令
         \begin{gather*}
             k_0 = 1 - (l_1 + l_2 + \cdots + l_s), \\
-            k_1 = \eta_1 = 1 - k_0 - (l_2 + l_3 + \cdots + l_s), \\
+            k_1 = l_1, \\
             \cdots, \\
-            k_s = \eta_s = 1 - k_0 - (l_1 + l_2 + \cdots + l_{s-1}). \\
+            k_s = l_s. \\
         \end{gather*}
-        可知 $k_0 + k_1 + \cdots + k_s = 1$, 而且
+        显然 $k_0 + k_1 + \cdots + k_s = 1$, 而且
         \begin{align*}
             & \gamma_0 + l_1\eta_1 + l_2\eta_2 + \cdots + l_s\eta_s \\
             ={} & (k_0 + k_1 + \cdots + k_s)\gamma_0 + k_1\eta_1 + \cdots + k_s\eta_s \\
@@ -161,6 +163,28 @@
             ={} & k_0\gamma_0 + k_1\gamma_1 + \cdots + k_s\gamma_s.   
         \end{align*}
     \item % 14
+        令 $n - s = r$, 这 $s + 1$ 个向量就取第 13 题中的 $s + 1$ 向量, 已知 $\gamma_0, \gamma_1, \cdots, \gamma_s$ 可以表示任意一个解向量, 现在只需证明它们线性无关即可.
+        任取 $k_0, k_1, \cdots, k_s \in K$, 使
+        \[
+            k_0\gamma_0 + k_1\gamma_1 + \cdots + k_s\gamma_s
+            =(k_0 + k_1 + \cdots + k_s)\gamma_0 + k_1\eta_1 + \cdots + k_s\eta_s = 0.
+        \]
+        若 $k_0 + k_1 + \cdots + k_s$ 不等于零, 那么
+        \[
+            \gamma_0 = -\frac{k_1}{k_0 + \cdots + k_s}\eta_1 - \cdots - \frac{k_s}{k_0 + \cdots + k_s}\eta_s.    
+        \] 
+        因为 $\gamma_0$ 是非齐次方程组特解, 因此将其带入方程组, 方程组的右边不可能等于 $0$.
+        但 $\eta_1, \cdots \eta_s$ 是导出方程 (齐次方程组) 的解, 然么它的任意线性组合代入其中, 右边等于 $0$.
+        因此
+        \[
+            \gamma_0 \ne -\frac{k_1}{k_0 + \cdots + k_s}\eta_1 - \cdots - \frac{k_s}{k_0 + \cdots + k_s}\eta_s,   
+        \]
+        即 $k_0 + k_1 + \cdots + k_s$ 必定等于 $0$, 则有
+        \[
+            k_1\eta_1 + \cdots + k_s\eta_s = 0,   
+        \]
+        $\eta_1, \cdots, \eta_s$ 基础解系, 是线性无关的, 因此 $k_0 = k_1 = k_2 = \cdots = k_s = 0$.
+        这样便证明这 $s + 1$ 个向量 $\gamma_0, \gamma_1, \cdots, \gamma_s$ 线性无关.
     \item % 15
         {\color{red} remained lacked}
     \item % 16
@@ -175,4 +199,4 @@
             \end{bmatrix}
         \end{gather*}
 \end{enumerate}
-\end{document}
+% \end{document}
