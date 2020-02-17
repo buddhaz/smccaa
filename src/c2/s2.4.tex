@@ -1,0 +1,100 @@
+% @author Shuning Zhang
+% @date 2020-02-11
+\documentclass[a4paper, 11pt]{ctexart}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage[bottom=2cm, left=2.5cm, right=2.5cm, top=2cm]{geometry}
+\usepackage{multicol}
+\newcommand{\rank}{\mathrm{r}}
+\begin{document}
+\begin{enumerate}
+    \item % 1
+        略.
+    \item % 2
+        略.
+    \item % 3
+        略.
+    \item % 4
+        \begin{gather*}
+            AJ =
+            \begin{bmatrix}
+                a_{12} & \cdots & a_{1n} & 0 \\
+                a_{22} & \cdots & a_{2n} & 0 \\
+                \vdots &  & \vdots & \vdots \\
+                a_{n2} & \cdots & a_{nn} & 0
+            \end{bmatrix},
+            JA =
+            \begin{bmatrix}
+                0 & 0 & \cdots & 0 \\
+                a_{11} & a_{12} & \cdots & a_{1n} \\
+                \vdots & \vdots &  & \vdots \\
+                a_{(n-1)1} & a_{(n-1)2} & \cdots & a_{(n-1)n}
+            \end{bmatrix}.
+        \end{gather*}
+        显然 $AJ$ 缺少 $A$ 的第 $1$ 列, $JA$ 缺少 $A$ 的第 $n$ 行.
+        当 $a_{12} = a_{13} = \cdots = a_{1n} = a_{2n} = \cdots = a_{(n-1)n} = 0$ 时, 且
+        \[
+            \begin{bmatrix}
+                a_{11} & a_{12} & \cdots & a_{1(n-1)} \\
+                a_{21} & a_{22} & \cdots & a_{2(n-1)} \\
+                \vdots & \vdots &  & \vdots \\
+                a_{(n-1)1} & a_{(n-1)2} & \cdots & a_{(n-1)(n-1)}
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+                a_{22} & a_{23} & \cdots & a_{2n} \\
+                a_{32} & a_{33} & \cdots & a_{3n} \\
+                \vdots & \vdots & & \vdots \\
+                a_{n2} & a_{n3} & \cdots & a_{nn} \\
+            \end{bmatrix}.    
+        \]
+        则有 $AJ = JA$.
+    \item % 5
+    \item % 6
+    \item % 7
+        {\heiti 证明}\quad 根据命题 4.6, 则有
+        \[
+            0 = \rank(0) = \rank(AB) \geqslant \rank(A) + \rank(B) - n.    
+        \]
+        移项即可得 $\rank(A) + \rank(B) \leqslant n$.
+    \item % 8
+        {\heiti 证明}\quad 将 $A$ 写为列向量的形式 $\alpha_1, \alpha_2, \cdots, \alpha_n$. 那么 $AB$ 和 $AC$ 的第 $j$ 列则可表示为
+        \[
+            AB_j = AC_j = (\alpha_1, \alpha_2, \cdots, \alpha_n)
+            \begin{bmatrix}
+                k_1 \\
+                k_2 \\
+                \vdots \\
+                k_n
+            \end{bmatrix}
+            = k_1\alpha_1 + k_2\alpha_2 + \cdots + k_n\alpha_n.    
+        \]
+        因为 $\alpha_1, \alpha_2, \cdots, \alpha_n$ 线性无关 ($\rank(A) = n$), 故表示方式唯一. 因此 $B$ 的第 $j$ 列等于 $C$ 的第 $j$ 列.
+        进一步可知 $B$ 和 $C$ 的每一列都相等, 因此 $B = C$.
+    \item % 9
+        
+    \item % 10
+        \[
+            \rank((A+B)C) = \rank(AC + BC) \leqslant \rank(AC) + \rank(BC)    
+        \]
+    \item % 11
+    \item % 12
+        \begin{proof}
+            根据命题 4.6, 则有
+            \[
+                \rank(AB) \leqslant \rank(A) + \rank(B) - n.    
+            \]
+            考察 $C$, 显然有
+            \[
+                \rank(C) \leqslant n.    
+            \]
+            因此 $\rank(AB) + \rank(C) \leqslant \rank(A) + \rank(B)$.
+        \end{proof}
+    \item % 13
+    \item % 14
+    \item % 15
+    \item % 16
+        因为 $AB = C$, 故 $(AB)' = B'A' = C'$, 求 $C$ 的列向量组
+\end{enumerate}
+\end{document}
